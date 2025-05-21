@@ -2,11 +2,26 @@ import { useDispatch, useSelector } from "react-redux";
 import { useState, useEffect, useRef } from "react";
 import { loadMovies } from "../../http/movieHttp";
 import { movieActions } from "../../stores/slice/movieSlice";
-import Slider from "react-slick/lib/slider";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
+import styled from "styled-components";
 
 export default function MainHeader() {
   const movieList = useSelector((store) => store.movie);
   const mainHeaderDispatcher = useDispatch();
+
+  const BackDrop = styled.div`
+    position: absolute;
+    background-image: url("https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/${({
+      url,
+    }) => url}");
+    background-size: ${window.innerWidth}px;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 730px;
+    z-index: -1;
+  `;
 
   useEffect(() => {
     (async () => {
@@ -32,35 +47,36 @@ export default function MainHeader() {
         arrows={false}
         dots={false}
         infinite={true}
-        slidesToShow={3}
+        slidesToShow={1}
         slidesToScroll={1}
         autoplay={true}
-        speed={2000}
-        autoplaySpeed={2000}
-        cssEase={"linear"}
-      ></Slider>
-      <div>
-        <img
-          alt={bestMovies[0].title}
-          className="thumbnail"
-          src={`http://image.tmdb.org/t/p/w1920_and_h800_multi_faces/${bestMovies[0].backdrop_path}`} // 처음에는 데이터가 없으니까 에러가 뜸 패치하고 난 뒤에 데이터를 받아와야 뜬다!
-        />
-        <div className="content big-header">
-          <div>
-            <h1 className="top-movie-subject">{bestMovies[0].title}</h1>
-            <h2 className="top-movie-1">
-              <div className="top10">
-                <div className="top">TOP</div>
-                <div className="top-number">10</div>
+        speed={1000}
+        autoplaySpeed={5000}
+        cssEase="linear"
+      >
+        {bestMovies.map((movie) => (
+          <div key={movie.id} className="slider-item">
+            <BackDrop url={movie.backdrop_path} />
+            <div className="content big-header">
+              <div>
+                <h1 className="top-movie-subject">{movie.title}</h1>
+                <h2 className="top-movie-1">
+                  <div className="top10">
+                    <div className="top">TOP</div>
+                    <div className="top-number">10</div>
+                  </div>
+                  오늘 영화 순위 1위
+                </h2>
+                <p className="top-movie-summary">{movie.overview}</p>
+                <button className="white-button play-icon">재생</button>
+                <button className="tranparent-50-button info-icon">
+                  상세정보
+                </button>
               </div>
-              오늘 영화 순위 1위
-            </h2>
-            <p className="top-movie-summary">{bestMovies[0].overview}</p>
-            <button className="white-button play-icon">재생</button>
-            <button className="tranparent-50-button info-icon">상세정보</button>
+            </div>
           </div>
-        </div>
-      </div>
+        ))}
+      </Slider>
     </header>
   );
 }

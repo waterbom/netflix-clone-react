@@ -7,6 +7,7 @@
   z-index: 1000;
   background-color: #000;
 }
+
 .headerMainMenu {
   position: sticky;
   top: 0px;
@@ -21,6 +22,7 @@
   padding: 1rem;
   background-color: #000;
 }
+
 .logo {
   background-image: url("../../../public/assets/images/Netflix_Logo_PMS.png");
   background-repeat: no-repeat;
@@ -28,13 +30,14 @@
   background-size: 150px 50px;
   padding-left: 180px;
 }
+
 .headerCategory {
   position: sticky;
   top: 49px;
   z-index: 1000;
 }
 
-.headerCategoryBlackBackfround {
+.headerCategoryBlackBackground {
   background-color: #000;
 }
 
