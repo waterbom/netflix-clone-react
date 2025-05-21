@@ -1,70 +1,70 @@
-# Getting Started with Create React App
+window.onblur = function() {alert("asda")} // 아무효과없다가 다른 윈도우를 갔다오면 함수실행(onblur)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+window.onscroll =  unction {console.log("asd");}; // 스크롤 할 때마다 함수실행
+    window.onScrollHandler = function() {consol.log("scroll!")} // 이걸 만들거다
+    window.onscroll = window.scrollHabndler; // 이렇게 바로넣기도 가능 
+      이걸로 스크롤 내리면 배경 까맣게하고 안하고를 만듦 index.html에
 
-## Available Scripts
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-In the project directory, you can run:
 
-### `npm start`
+const rect = mainWrapper.current.getBoundingClientRect();
+console.log(rect);
+<img width="1377" alt="스크린샷 2025-05-21 오후 1 21 45" src="https://github.com/user-attachments/assets/4bd41f12-2bb8-4a67-a3c8-1664fe542b57" />
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+  window.scrollHandler = () => {
+    const rect = mainWrapper.current.getBoundingClientRect(); // rect라는 이름으로 가져옴
+    const top = rect.top; // rect에서 탑만 뽑아옴
 
-### `npm run build`
+    if (top <= 0) {
+      console.log("카테고리를 검정색으로 칠한다.");
+    } else {
+      console.log("카테고리를 투명색으로 칠한다.");
+    }
+    
+<img width="1377" alt="스크린샷 2025-05-21 오후 1 23 20" src="https://github.com/user-attachments/assets/e88995ff-45dd-4738-bc50-01d50c1c2186" />
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+ src={`http://image.tmdb.org/t/p/w1920_and_h800_multi_faces/${bestMovies[0].backdrop_path}`} // 처음에는 데이터가 없으니까 에러가 뜸 패치하고 난 뒤에 데이터를 받아와야 뜬다!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+   if (!movieList.results) { // loading 이 뜨고 난 뒤에 패치가 진행되어서 사진이 뜨게 됨!
+    return <div>Loading...</div>;
+  }
 
-### `npm run eject`
+<img width="1377" alt="스크린샷 2025-05-21 오후 1 56 54" src="https://github.com/user-attachments/assets/1a0940a9-fd58-4902-9326-25aeea1cddc6" />
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+<img width="1377" alt="스크린샷 2025-05-21 오후 1 59 24" src="https://github.com/user-attachments/assets/51185938-a114-430d-898f-a7218bfdc418" />
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<img width="1377" alt="스크린샷 2025-05-21 오후 2 00 54" src="https://github.com/user-attachments/assets/486cd8f1-b2d2-4f69-8277-2215e5d6a620" />
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+
+
+
+
