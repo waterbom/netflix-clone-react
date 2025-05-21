@@ -1,32 +1,11 @@
+import Header from "./components/header/Header";
+import MovieStore from "./stores/MovieStore";
+
+// MovieStore감싸야 useSelector를 제공할 수 있다.
 function App() {
   return (
-    <>
-      {" "}
-      <div className="header-menu">
-        <div className="content">
-          <ul className="header-main-menu logo">
-            <li>홈</li>
-            <li>시리즈</li>
-            <li>영화</li>
-            <li>게임</li>
-            <li>NEW! 요즘 대체 콘텐츠</li>
-            <li>내가 찜한 리스트</li>
-            <li>언어별로 찾아보기</li>
-          </ul>
-        </div>
-      </div>
-      <div className="header-category">
-        <div className="content">
-          <div className="category-type">
-            <h1>영화</h1>
-            <select>
-              <option>장르</option>
-              <option>장르1</option>
-              <option>장르2</option>
-            </select>
-          </div>
-        </div>
-      </div>
+    <MovieStore>
+      <Header />
       <div className="main-wrapper">
         <header>
           <video
@@ -261,7 +240,7 @@ function App() {
           </ul>
         </div>
       </div>
-    </>
+    </MovieStore>
   );
 }
 

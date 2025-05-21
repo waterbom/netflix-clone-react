@@ -1,0 +1,53 @@
+/* Header의 이름을 그대로 따올 필요는 없지만 관습적으로 따라가야댐. header.jsx에서 header만을 위한 css만 여기에 붙이기*/
+
+/* 클래스들을 키로 만들어서 유일하게 사용할 수 있게끔 별도의 키로 만든다. 그래서 카멜케이스로 선언해야댐 */
+.headerMenu {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #000;
+}
+.headerMainMenu {
+  position: sticky;
+  top: 0px;
+
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  gap: 30px;
+  color: #eee;
+  font-size: 0.9rem;
+  padding: 1rem;
+  background-color: #000;
+}
+.logo {
+  background-image: url("../../../public/assets/images/Netflix_Logo_PMS.png");
+  background-repeat: no-repeat;
+  background-position: -16px;
+  background-size: 150px 50px;
+  padding-left: 180px;
+}
+.headerCategory {
+  position: sticky;
+  top: 49px;
+  z-index: 1000;
+}
+
+.categoryType {
+  background-color: transparent;
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+}
+
+.categoryType h1 {
+  margin: 0;
+  margin-right: 20px;
+}
+
+.categoryType select {
+  padding: 5px;
+  background-color: black;
+  color: white;
+}
