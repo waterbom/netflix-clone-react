@@ -20,7 +20,7 @@ body {
   margin: 0 auto;
 }
 
-.video-thumbnail {
+.thumbnail {
   position: absolute;
   top: 49.5px;
   left: 0;
@@ -41,6 +41,9 @@ body {
   font-size: 200px;
   margin: 0;
   line-height: 0.8;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .top-movie-1 {
