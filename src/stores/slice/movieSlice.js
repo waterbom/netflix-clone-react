@@ -6,6 +6,10 @@ export const movieSlice = createSlice({
   name: "movie slice",
   initialState: {}, // tmdb 에서 객체로 받아오는중
   reducers: {
+    reset(state) {
+      state.results = undefined;
+      state.page = 0;
+    },
     init(state, action) {
       Object.assign(state, action.payload); // 전부다 복사해 버려라
     },
