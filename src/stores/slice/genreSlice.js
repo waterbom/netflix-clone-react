@@ -10,6 +10,6 @@ export const genreSliceStore = createSlice({
       }
     },
   },
-}); // 영화는 데이터가 쉽게 바뀌지않기 떄문에 슬라이스를 만드는 것이 이득
+});
 
 export const genreActions = genreSliceStore.actions;
